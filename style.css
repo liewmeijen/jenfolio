@@ -1,0 +1,294 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: 'Pixel', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;                /* Enable flexbox */
+  justify-content: flex-start;  /* Align content to left */
+   align-items: center;         /* Center vertically */
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  overflow-y: auto;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 60px;
+  margin: 0;
+  text-align: left;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  font-family: 'Press Start 2P', sans-serif;
+  margin: 0 15px 0 0;
+  text-decoration: none;
+  color: #2E7D32;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #0077cc;
+}
+
+h1 {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  color: goldenrod;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.bio {
+  font-family: 'Pacifico', cursive;
+  font-size: 1rem;
+  color: purple;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 25px;
+  border: 2px solid #0077cc;
+}
+
+.resume-button:hover {
+  background-color: #555;
+}
+
+.icons {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.icons a {
+  margin: 0 10px 0 0;
+}
+
+.icons img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icons img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.projects{
+  font-family: 'Winky Rough', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: black;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.projects h3{
+  font-family: 'Winky Rough', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #0077cc;
+  line-height: 1.5;
+  text-align: left;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #003366;
+  text-align: left;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .bio {
+    font-size: 1.05rem;
+  }
+
+  .icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar a {
+    margin: 0 10px 10px 0;
+    font-size: 0.95rem;
+    display: block;
+  }
+}
+
+/* About Section */
+.about-section {
+  font-family: 'Winky Rough', serif;
+  margin-top: 30px;
+  font-size: 1.05rem;
+  color: black;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: left;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Contact Section */
+.contact-section {
+  font-family: 'Winky Rough', serif;
+  margin-top: 40px;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.05rem;
+  color: black;
+  line-height: 1.6;
+}
+
+.name-image-wrapper {
+  display: flex;
+  flex-direction: column;       /* Stack image above text */
+  align-items: flex-start;      /* Align to the left side */
+  gap: 20px;                    /* Space between image and name */
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-right: 0;               /* Reset margin since image is now above */
+}
+
+.experience-section {
+  margin-top: 40px;
+  max-width: 800px;
+  text-align: left;
+  font-family: 'Winky Rough', serif;
+  font-size: 1.05rem;
+  color: black;
+  line-height: 1.6;
+}
+
+.experience-section h2 {
+  font-size: 1.4rem;
+  color: #0077cc;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.experience-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+}
+
+.date-range {
+  color: #2E7D32;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.project-card, .certificate-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Winky Rough', serif;
+}
+
+.certificate-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.certificate-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.certificate-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  color: #0077cc;        /* Nice blue tone */
+  font-size: 0.9rem;     /* Smaller font size */
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+
+
+
+
