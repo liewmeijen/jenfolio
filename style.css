@@ -288,7 +288,32 @@ footer a:hover {
   margin-top: 10px;
 }
 
+.duolingo-section {
+  text-align: center;
+  margin: 40px auto;
+}
 
+.duolingo-box {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.duolingo-img {
+  width: 30%;
+  height: auto;
+  border-radius: 8;
+  display: block;
+}
+
+.duolingo-section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
 
 
 
